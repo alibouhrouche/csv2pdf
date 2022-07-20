@@ -1,54 +1,32 @@
-# node-cli-boilerplate
+# csv2pdf
 
-> Boilerplate to kickstart creating a Node.js command-line tool
-
-This is what I use for [my own command-line tools](https://www.npmjs.com/~sindresorhus).
-
-Also check out [`node-module-boilerplate`](https://github.com/sindresorhus/node-module-boilerplate).
-
-## Getting started
-
-**Click the "Use this template" button.**
-
-Alternatively, create a new directory and then run:
-
-```
-$ curl -fsSL https://github.com/sindresorhus/node-cli-boilerplate/archive/main.tar.gz | tar -xz --strip-components=1
-```
-
-There's also a [Yeoman generator](https://github.com/sindresorhus/generator-nm).
-
-
----
-
-**Remove everything from here and above**
-
----
-
-# unicorn-fun-cli
-
-> My awesome command-line tool
+> A Simple PDF generator for CSV files
 
 ## Install
 
 ```
-$ npm install --global unicorn-fun-cli
+$ npm i -g csv2pdf
 ```
 
 ## Usage
 
 ```
-$ unicorn-fun --help
+$ csv2pdf --help
+Usage: csv2pdf [options] [command]
 
-  Usage
-    $ unicorn-fun [input]
+A Simple pdf generator for CSV files
 
-  Options
-    --postfix  Lorem ipsum  [Default: rainbows]
+Options:
+  -V, --version                    output the version number
+  -h, --help                       display help for command
 
-  Examples
-    $ cli-name
-    unicorns & rainbows
-    $ cli-name ponies
-    ponies & rainbows
+Commands:
+  generate [options] <input-file>  Generate a PDF file from a specified CSV file.
+  help [command]                   display help for command
+```
+
+# Example
+```
+$ csv2pdf generate input.csv -t template.tpl -o out.pdf
+100 page generated.
 ```
